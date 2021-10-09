@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}translator{% endblock %} 
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Sign Language Translator</h1><br>
+        <div>
+
+        <img src="{{ url_for('video') }}" width="50%"/>
+        <img src="{{ url_for('static', filename='asl.png')}}" alt="alphapet sign language"
+         width="45%" style="display: inline-block; margin-bottom: 100px;">
+
+        </div>
+    </body>
+</html>
+
+{% endblock %}

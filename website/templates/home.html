@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel</title>
+
+    <!------------ GOOGLE FONTS ------------>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap"
+        rel="stylesheet">
+
+    <!------------ FONT AWESOME ------------>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <!------------ CUSTOM STYLE SHEET ------------>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <div class="slide-data">
+                    <h1>Sign Language Translator # 1</h1>
+                    <p>Our site provide the ability to translate sign language into Alphapet letters.</p>
+                    <button><a href="/translator" style="color: white;">Try it</a></button>
+                    
+                    
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-data">
+                    <h1>Our goal # 2</h1>
+                    <p>The goal of this website is helping people to understand and implement sign language to 
+                      text that normal people can read it.</p>
+                    
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-data">
+                    <h1>About us # 3</h1>
+                    <p>We are students from King Fasial University, which we are working on this project
+                      for our graduation from the Computer Science and IT Colloge.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <button class="arrows prev" onclick="plusslide(-1)">
+            <span><i class="fas fa-angle-left"></i></span>
+        </button>
+        <button class="arrows next" onclick="plusslide(1)">
+            <span><i class="fas fa-angle-right"></i></span>
+        </button>
+
+        <div class="dots">
+            <span onclick="currentslide(1)"></span>
+            <span onclick="currentslide(2)"></span>
+            <span onclick="currentslide(3)"></span>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>
+  {% endblock %}
